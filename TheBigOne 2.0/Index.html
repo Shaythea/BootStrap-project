@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+    @media (max-width:991px) {
+
+        .sidebar {
+            background-color: 255, 255, 255, 0.15;
+            backdrop-filter: blur(10px);
+        }
+
+    }
+
+    @media (min-width:970px) {
+
+        .pepe2 {
+            display: none;
+        }
+
+    }
+
+    @media (max-width:970px) {
+
+        .pepe1 {
+            display: none;
+        }
+
+    }
+
+    @media (max-width:415px) {
+
+        .pepe1 {
+            display: none;
+        }
+
+        .pepe2 {
+            display: none;
+        }
+
+    }
+
+
+
+
+    section.container {
+        min-width: 200px;
+        margin: 10% auto;
+
+        text-align: center;
+    }
+
+
+    button:hover {
+        cursor: pointer
+    }
+
+    button {
+        background: transparent;
+        outline: none;
+        position: relative;
+        border: 2px solid gold;
+        padding: 15px 50px;
+        overflow: hidden;
+    }
+
+    /*button:before (attr data-hover)*/
+    button:hover:before {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+
+    button:before {
+        content: attr(data-hover);
+        position: absolute;
+        top: 1.5em;
+        left: 0;
+        width: 100%;
+        font-weight: 800;
+        font-size: .8em;
+        opacity: 0;
+        transform: translate(-100%, 0);
+        transition: all .3s ease-in-out;
+    }
+
+    /*button div (button text before hover)*/
+    button:hover div {
+        opacity: 0;
+        transform: translate(100%, 0)
+    }
+
+    button div {
+        font-weight: 800;
+        font-size: .8em;
+        transition: all .3s ease-in-out;
+    }
+
+    .s {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        gap: 1rem;
+    }
+
+    .s::before,
+    .s::after {
+        content: "";
+        border-top: 0.1rem double gold;
+        align-self: center;
+    }
+
+    @media (max-width:576px) {
+
+        .ask {
+            display: none;
+        }
+
+    }
+</style>
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZE BIG ONE</title>
+
+</head>
+
+<body dir="rtl" style="background-color: #eff3f5;
+background-image: linear-gradient(160deg, #c1c42f 0%, #91917e 33%, #66634a 66%, #d5e034 100%);
+ background-repeat: no-repeat;background-size: cover;height: 100%;">
+
+    <header class="">
+
+        <nav class="navbar navbar-expand-lg bg-body-tertiary position-relative">
+            <div class="container ">
+                <a class="navbar-brand" href="#">
+                    <img src="icons8-diamond-48.png" alt="" width="40" height="34">
+                    الماس
+                    شرق
+                </a>
+                <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-start sidebar" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header border-bottom">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                            <img src="icons8-diamond-80.png" alt="">
+                        </h5>
+                        <button type="button" class="btn-close btn-close-black" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body d-flex flex-column flex-lg-row p-4 p-lg-0 ">
+                        <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="Index.html">خانه</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    اخذ نمایندگی
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    انتقال به..
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">محصولات ما</a></li>
+                                    <li><a class="dropdown-item" href="#">
+                                            مراحل ساخت زیورآلات
+                                        </a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">سایر محصولات</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div class="justify-content-end align-items-center gap-3  d-flex flex-column flex-lg-row">
+                            <a href="signup.html"><button type="button" class="btn btn-primary btn-sm">ثبت
+                                    نام</button></a>
+                            <a href="firstlook.html"><button type="button"
+                                class="btn btn-secondary btn-sm">خروج</button></a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <hr class="pb-1">
+        </nav>
+
+
+
+    </header>
+
+    <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+
+    <main>
+
+
+        <div class="d-flex text-white">
+            <div class="z-0 position-relative">
+                <img src="Luxury-Jewellery.jpg" alt="" class="w-100">
+            </div>
+
+            <div class="z-1 position-absolute me-auto top-50 start-0 ms-5 pepe1 lead" style="width: 200px;">
+                <span style="font-size: 30px;">
+                    ما انتخاب بهترین ها هستیم تا شما انتخاب بهترین ها باشید
+                </span>
+
+                <section class="container">
+
+                    <a href="gallery.html">
+                        <button data-hover="کلیک کنید!" style="color: white;">
+                            <div>
+                                گالری جواهرات
+                            </div>
+                        </button>
+                    </a>
+
+                </section>
+
+            </div>
+            <div class="z-1 position-absolute me-auto top-25 start-0 ms-5 mt-5 pepe2 lead " style="width: 200px;">
+
+
+                جون مادرت از ما خرید کن
+                <section class="container">
+
+                    <button data-hover="کلیک کنید!" style="color: white;">
+                        <div>
+                            گالری جواهرات
+                        </div>
+                    </button>
+
+
+                </section>
+
+            </div>
+
+        </div>
+
+        <br>
+
+        <div class="row align-items-center justify-content-center container-fluid">
+
+            <div class="col-sm text-center me-5 ">
+                <h3 class="lead" style="color: gold;font-family: tahoma;filter: drop-shadow(1px 1px 2px black);">
+                    محصولات ما
+                </h3>
+                <span class="lead text-white" style="font-weight: 200;">
+                    ما در فروشگاه آنلاین طلا طیفی از نفیس‌ترین و خلاقانه‌ترین حلقه‌های تک ازدواج را فراهم کرده‌ایم که
+                    گران‌بهاترین تراش‌های برلیان و سنگ‌های قیمتی را بر روی خود جای‌داده‌اند. یکی از مهم‌ترین ویژگی‌های
+                    سفارشی‌سازی که در بخش انواع حلقه و انگشتر لازم است به آن اشاره کنیم، امکان سفارش محصول بر اساس ابعاد
+                    انگشت دست فرد است که بخصوص در مورد حلقه‌های ازدواج از اهمیت ویژه‌ای برخوردار است. فرد بنا است که
+                    انگشتر را در طولانی‌مدت و بعضا به‌طور دائم مورداستفاده قرار دهد و استفاده از یک حلقه‌ی نامناسب
+                    می‌تواند تجربه‌ی ناخوش آیندی باشد.
+                    <br><br>
+                    <a href="OurProducts.html">
+                        <button type="button" class="btn btn-outline-warning "
+                            style="font-family: tahoma;font-weight: 700;filter: drop-shadow(1px 1px 2px black);">
+                            مشاهده محصولات
+                        </button>
+                    </a>
+                </span>
+            </div>
+            <div class="col-sm me-5" style="filter: drop-shadow(1px 1px 2px gold);">
+                <img src="bracelet.png" alt="" class="w-75 rounded ask">
+            </div>
+        </div>
+        <br>
+        <div class="row align-items-center justify-content-center container-fluid">
+
+            <div class="col-sm me-5">
+                <img src="Goldsmith.webp" alt="" class="w-75 rounded ask"
+                    style="filter: drop-shadow(1px 1px 2px gold);">
+            </div>
+
+            <div class="col-sm text-center me-5">
+                <h3 class="lead" style="color: gold;font-family: tahoma;filter: drop-shadow(1px 1px 2px black);">
+                    مراحل ساخت زیورآلات و جواهرات طلا و نقره
+                </h3>
+                <span class="lead text-white" style="font-weight: 200;">
+                    برای ساخت زیورآلات طلا و نقره مراحل متفاوتی پشت سر گذاشته می شود ، وجود هر
+
+                    مرحله در ساخت زیورآلات و جواهرات دلیل خاص خودش را دارد دلایلی همچون ( زیبایی بیشتر ، مقاومت بالاتر ،
+                    براقیت بیشتر ، ماندگاری رنگ و … )
+                    اکسسوری های طلا بیشترین محبوبیت را در بین تمامی اکسسوری ها دارد ، انگشتر ، دستبند ، زنجیر ، پلاک ،
+                    مدال ، ست و نیم ست و … همه اینها به شدت پرطرفدار هستند ، هر کدام از این اکسسوری ها روش ساخت خاص خود
+                    را دارند.
+
+                    در کل روش ساخت تمامی در چند مرحله خلاصه می شود که در ادامه به توضیح آن می پردازیم.
+                    <br><br>
+                    <a href="">
+                        <button type="button" class="btn btn-outline-warning "
+                            style="font-family: tahoma;font-weight: 700;filter: drop-shadow(1px 1px 2px black);">
+                            مشاهده مراحل ساخت
+                        </button>
+                    </a>
+
+                </span>
+            </div>
+
+        </div>
+        <br>
+        <div class="row align-items-center justify-content-center container-fluid">
+
+            <div class="col-sm text-center me-5">
+                <h3 class="lead" style="color: gold;font-family: tahoma;filter: drop-shadow(1px 1px 2px black);">
+                    سایر محصولات
+                </h3>
+                <span class="lead text-white" style="font-weight: 200;">
+
+                    <strong style="color: gold;filter: drop-shadow(1px 1px 2px black);"> الماس </strong>
+                    انواع الماس از نظر محل ساخت و استخراج آن به دو نوع الماس طبیعی و الماس مصنوعی تقسیم می‌شوند.
+
+                    هنگامی که کربن در عمق صد و بیست تا دویست کیلومتری زمین تحت فشار چهل و پنج هزار بار و همچنین تحت
+                    تأثیر دمایی معادل نهصد تا هزار و سیصد درجه سانتی‌گراد قرار بگیرد، الماس طبیعی به وجود می‌آید.
+
+                    الماس طبیعی در اغلب موارد به وسیله‌ی فوران آتشفشان به سطح زمین رسیده و به لایه‌های بالاتر راه پیدا
+                    می‌کند.
+
+                    حدود نیم قرن پیش دانشمندان توانستند مراحل شکل گیری الماس طبیعی را بیابند.
+
+                    <br>
+                    <strong style="color: gold;filter: drop-shadow(1px 1px 2px black);"> سنگ راف</strong>
+                    یا خام تا حد زیادی ابتدایی‌ترین شکل کریستال‌ها هستند که استخراج می‌شوند. اینها تکه سنگ‌هایی
+                    هستند که به طبیعی‌ترین روش فشرده شده‌اند. به نظر می‌رسد دقیقاً چگونه آنها از زمین خارج شده‌اند، دست
+                    نخورده توسط انسان‌ها و ماشین‌ها که باعث تصفیه یا درمان قلبی می‌شود.
+
+
+
+                    <br><br>
+                    <a href="">
+                        <button type="button" class="btn btn-outline-warning "
+                            style="font-family: tahoma;font-weight: 700;filter: drop-shadow(1px 1px 2px black);">
+                            بازدید
+                        </button>
+                    </a>
+                </span>
+            </div>
+            <div class="col-sm me-5">
+                <div class="lightbox ask" style="filter: drop-shadow(1px 1px 2px gold);">
+                    <div class="row ">
+                        <div class="col-lg-6 mt-2">
+                            <img src="diamond.jpg " data-mdb-img="https://mdbcdn.b-cdn.net/img/Photos/Slides/1.webp"
+                                alt="Table Full of Spices" class="w-100 mb-2 mb-md-4 shadow-1-strong rounded"
+                                style="height: 250px;width: 300px;" />
+
+                            <img src="pyrite.jpg" data-mdb-img="https://mdbcdn.b-cdn.net/img/Photos/Square/1.webp"
+                                alt="Coconut with Strawberries" class="w-100 shadow-1-strong rounded"
+                                style="height: 250px;width: 300px;" />
+                        </div>
+                        <div class="col-lg-6 mt-2">
+                            <img src="black.webp" data-mdb-img="https://mdbcdn.b-cdn.net/img/Photos/Vertical/1.webp"
+                                alt="Dark Roast Iced Coffee" class="w-100 shadow-1-strong rounded"
+                                style="height: 520px;width: 300px;" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="accordion accordion-flush text-center container lead" id="accordionFlushExample">
+            <div class="accordion-item rounded bg-light bg-gradient bg-opacity-50">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        خرید و فروش طلای آب شده چگونه است؟&nbsp&nbsp
+                    </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <strong style="color: yellow;font-weight: bolder;">نحوه خرید طلای آب شده:</strong>
+                        <hr>
+                        <strong style="color: black;">
+                            خرید و فروش <span style="color: green;">نقدی</span> طلای آب‌ شده:
+                        </strong>
+                        <br>
+                        <small>
+                            در معاملات نقدی در همان لحظه که معامله انجام می‌شود، هزینه آن پرداخت می‌شود و همچنین انگ و
+                            عیار طلا به صورت دقیق مشخص شده است. این نوع معاملات کاملاً به صورت نقدی صورت می‌گیرد و
+                            دریافت هیچ نسیه و چک و موارد این‌چنین در آن قابل‌قبول نیست. اگر به دنبال معاملات حلال و
+                            قانونی هستید؛ باید به سمت معاملات نقدی طلای آب شده بروید. این نوع معاملات یکی از
+                            پرطرف‌دارترین روش‌های خرید و فروش طلای آب شده است. همچنین علاوه بر قانونی‌بودن، این نوع
+                            معاملات کم‌ریسک‌تر و مطمئن‌تر از معاملات کاغذی است.
+                        </small>
+                        <hr>
+                        <strong style="color: black;">
+                            خرید و فروش <span style="color: red;">کاغذی </span> طلای آب‌ شده:
+                        </strong>
+                        <br>
+                        <small>
+                            هنگامی که در معاملات طلا به‌جای خود طلا زمان معامله، وزن طلا، میزان پرداخت را دریافت کنید؛
+                            معامله کاغذی انجام داده‌اید. البته اگر که دوست دارید معاملات غیرقانونی انجام دهید، باید به
+                            سراغ معاملات کاغذی طلای آب شده بروید. اگر می‌خواهید خرید و فروش کاغذی طلای آب شده را انجام
+                            دهید باید در این زمینه کمی تخصص داشته باشید؛ زیرا این بازار دارای فوت‌وفن‌های خاص خودش است و
+                            همچنین نتوانند سرتان کلاه بگذارند و پولتان را بالا بکشند.
+                            <br>
+                            خوب است بدانید به طور کلی معاملات کاغذی معاملاتی هستند که به صورت روزانه، هفتگی و ماهانه
+                            صورت می‌گیرد و هیچ کالایی در آن‌ها ردوبدل نمی‌شود. یعنی نه خریدار پولی را به فروشنده تحویل
+                            می‌دهد و نه فروشنده کالایی را به خریدار تحویل می‌دهد. بلکه در این نوع معاملات فقط تفاوت
+                            میزان قیمت برای افراد مهم است و بر اساس حرف معامله می‌کنند. در معاملات کاغذی حتی یک گرم طلا
+                            هم جابه‌جا نمی‌شود و بر همین اساس برحسب اعتماد میان افراد صورت می‌گیرد. همچنین هیچ نهاد
+                            دولتی بر روی آن نظارت ندارد و خلاصه کلام کاری غیرقانونی است.
+                        </small>
+
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item rounded bg-light bg-gradient bg-opacity-50">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        آیا مبلغ پرداختی قابل بازگشت است؟&nbsp&nbsp
+                    </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        یکی از اصول اولیه الماس شرق برای جلب رضایت حداکثری کاربران، تضمین ۷ روزه بازگشت کالا برای
+                        کاربران عادی و فرصت ۳۰ روزه بازگشت سفارش برای کاربران سهام دار است. در این مقاله کوتاه توضیح
+                        می‌دهیم که بعد از ثبت درخواست مرجوعی یک کالا دیجی‌کالا چطور هزینه سفارش‌های بازگشت داده شده را
+                        به حساب خریداران باز می‌گرداند.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item rounded bg-light bg-gradient bg-opacity-50">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        درباره الماس شرق &nbsp&nbsp
+                    </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body p-5">
+
+                        محصولات موجود در گالری الماس دارای ضمانت اصالت کالا می باشند، تمامی محصولات با توضیحات و تصاویری
+                        که در صفحه آن ها موجود است مطالقت کامل دارند، در غیر این صورت حق مرجوع کردن محصول برای مشتری
+                        کاملا محفوظ است.
+
+                        فروشگاه اینترنتی الماس شرق سفارشات را به دو صورت در تهران به دست مشتریان خود می رساند ۱- فوری : کمتر
+                        از ۱۴ ساعت محصول به دست شما خواهد رسید. ۲-رایگان با توجه به زمان انتخابی بین ۳ الی ۵ روز سفارش
+                        خود را درب منرل تحویل بگیرید.
+
+                        سفارشات در شهرستان با توجه به شهر مقصد با تیپاکس و یا پست به صورت رایگان ارسال می گردند و در
+                        حدود ۳ الی ۵ روز زمان خواهد برد.
+
+                        گالری الماس شرق تمام تلاش خود را دارد تا با کیفیت ترین زیورآلات زنانه و مردانه را تقدیم مشتریان عزیز
+                        خود نماید. به منظور اطمینان خرید از الماس شرق ، به صفحه اعتماد به الماس شرق مراجعه کرده و مجوز های فروش
+                        فروشگاه الماس شرق را ملاحظه نمایید.
+
+                        تمامی قیمت های خرید نقره جات از فروشگاه بدون واسطه ای است به همین دلیل کمترین قیمت را در بین
+                        تمامی زیورآلات فروشی در سراسر کشور تهران و تمامی شهر ستانها دارد.
+
+                        همچنین گفتنی است تمامی زیورآلات زنانه و مردانه موجود در فروشگاه noghra.com دارای عیار تضمین شده
+                        ۹۲۵ است،
+
+                        کارشناسان واحد های مختلف گالری الماس شرق از طریق واتس آپ و چت آنلاین همواره آماده پاسخگوی مشتریان
+                        عزیز هستند.</div>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+
+
+    <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+    <br><br>
+
+    <h1 class="s" style="color: white;">
+        اعضای تیم مجرب ما
+    </h1>
+
+    <br>
+
+    <div class="row align-items-center d-flex justify-content-center container-fluid text-center mx-auto " style="width: 1000px;">
+        <div class="card col-md bg-light bg-gradient bg-opacity-50" style="width: 18rem;">
+            <img src="killer1.jpg" class="card-img-top mt-1 rounded-circle" alt="..." style="height: 300px;">
+            <div class="card-body">
+                <h5 class="card-title text-danger">محمد محمدیان</h5>
+                <p class="card-text">
+                    قهرمان جام جهانی قاتلان سر به زیر و قائم مقام کمیسیون چاقو کشان
+                </p>
+            </div>
+        </div>
+        <div class="card col-md bg-light bg-gradient bg-opacity-50" style="width: 18rem;">
+            <img src="killer2.jpg" class="card-img-top mt-1 rounded-circle" alt="killer2.jpg" style="height: 300px;">
+            <div class="card-body">
+                <h5 class="card-title text-danger">
+                    فاطمه فاطمیان
+                </h5>
+                <p class="card-text">
+                    آدمخوار پایه یک خاور میانه
+                    <a href="">
+                        <button type="button" class="btn btn-outline-danger "
+                            style="font-family: tahoma;font-weight: 700;filter: drop-shadow(1px 1px 2px rgb(221, 221, 221));">
+                            درخواست خورده شدن
+                        </button>
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div class="card col-md bg-light bg-gradient bg-opacity-50" style="width: 18rem;">
+            <img src="killer3.jpg" class="card-img-top mt-1 rounded-circle" alt="killer2.jpg" style="height: 300px;">
+            <div class="card-body ">
+                <h5 class="card-title text-danger">
+                    علی علیان
+                </h5>
+                <p class="card-text">
+                    روان پریش
+                    مازوخیست
+                    بدگمان
+                    دچار به اختلال شخصیت ضداجتماعی
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+
+    <footer class="bg-body-tertiary text-white pt-5 pb-4" style="width: 100%;position: relative; bottom: 0;top: 100px;">
+
+        <div class="container text-center text-md-left">
+
+            <div class="row text-center text-md-left">
+
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-primary"
+                        style="text-shadow: 1px 1px 2px black;">
+                        الماس شرق
+                    </h5>
+                    <p class="text-dark penis">
+
+                       
+                        فروشگاه جواهرات و زیورآلات الماس شرق با فروش اینترنتی بدون واسطه زیورآلات
+                        ساخت داخل و خارج کشور همواره به دنبال کاهش هزینه ها و افزایش کیفیت و جلب نهایت رضایت مشتریان
+                        است.
+
+                    </p>
+
+                </div>
+
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-primary"
+                        style="text-shadow: 1px 1px 2px black;">
+                        لینک های مربوطه
+                    </h5>
+                    <p>
+                        <a href="" class="text-black" style="text-decoration: none;">سهام مجموعه</a>
+                    </p>
+                    <p>
+                        <a href="" class="text-black" style="text-decoration: none;">خرید طلا دست دوم</a>
+                    </p>
+                    <p>
+                        <a href="" class="text-black" style="text-decoration: none;">اخذ نمایندگی</a>
+                    </p>
+                    <p>
+                        <a href="" class="text-black" style="text-decoration: none;">فروش عمده</a>
+                    </p>
+
+                </div>
+
+                
+
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3 text-dark">
+                    <h5 class="text-uppercase mb-4 font-weight-bold  text-primary"
+                        style="text-shadow: 1px 1px 2px black;">
+                        تماس
+                    </h5>
+                    <p>
+                        <i class="fas fa-home mr-3"></i> آدرس
+                    </p>
+                    <p>
+                        <i class="fas fa-envelope mr-3"></i> ایمیل کاری
+                    </p>
+                    <p>
+                        <i class="fas fa-phone mr-3"></i> شماره تماس
+                    </p>
+                    <p>
+                        <i class="fas fa-print mr-3"></i> فکس
+                    </p>
+                </div>
+
+                <hr class="mb-2">
+
+                <div class="row align-items-center">
+
+                    <div class="col-md-7 col-lg-8">
+
+                        <p class="lead " style="text-shadow: 1px 1px 2px black;">
+                            کپی رایت ©2023 بلعیده شده توسط :
+
+                            <a href="" style="text-decoration: none;">
+                                <strong class="text-danger"> مجتمع فنی پیروزی </strong>
+                            </a>
+                        </p>
+
+                    </div>
+
+
+
+                    <div class="col-md-5 col-lg-4">
+
+                        <div class="text-center text-md-right">
+
+                            <ul class="list-unstyled list-inline">
+
+                                <li class="list-inline-item">
+                                    <a href="" class="btn-floating btn-sm text-black" style="font-size: 23px;">
+                                        <i class=" fab fa-facebook "></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="" class="btn-floating btn-sm text-black" style="font-size: 23px;">
+                                        <i class=" fab fa-instagram "></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="" class="btn-floating btn-sm text-black" style="font-size: 23px;">
+                                        <i class=" fab fa-telegram "></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="" class="btn-floating btn-sm text-black" style="font-size: 23px;">
+                                        <i class=" fab fa-whatsapp "></i>
+                                    </a>
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+    </footer>
+
+</body>
+
+</html>
